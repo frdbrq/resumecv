@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;600;1,400@displayswap');
+
+/*================== VARIAVEIS CSS ===============*/
+
+:root {
+    --back-color: #fff;
+    --back-color-left: #065c60;
+    --back-color-right: rgb(255, 245, 232);
+    --color-icon: #ffa470;
+    --light-color: #fff2ea;
+    --dark-color: #065c60;
+    --text-color-dark: #000;
+    --text-color-light: #fff;
+
+    /* FONTE*/
+
+    --body-font: 'Poppins', sans-serif;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --h2-font-size: 1.5rem;
+        --h3-font-size:1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+
+    }
+
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--back-color);
+    color: var(--text-color-dark);
+
+}
+
+h1 {
+    color: var(--dark-color);
+}
+
+h2, h3, h4 {
+    color: var(--color-icon);
+    font-weight: 300;  
+    letter-spacing: 0.1rem;
+    
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--back-color);
+    font-size: var(--smaller-font-size);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: var(--smaller-font-size);
+}
+
+i{
+    margin: 0.8rem;
+    color: var(--color-icon);
+}
+
+.container {
+    max-width: 968px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(5, auto);
+
+}
+
+.parent>div{
+    padding: 1.5rem;
+}
+
+.profile__perfil {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: var(--back-color-left);
+
+}
+
+.profile-name {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: var(--back-color-right);
+
+}
+
+.contact_me {
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: var(--back-color-left);
+    color: var(--text-color-light);
+
+}
+
+.skills {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: var(--back-color-left);
+    color: var(--text-color-light);
+}
+
+.prizes {
+    grid-area: 4 / 1 / 5 /2;
+    background-color: var(--back-color-left);
+    color: var(--text-color-light);
+
+}
+
+.profile {
+    grid-area: 2 / 2 / 5 / 3;
+    background-color: var(--back-color-right);
+
+}
+
+.flex_resume {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+hr {
+    width: 20vw;
+    border-top: 1.2px dashed var(--dark-color);
+    
+}
+
+.skills_scale{
+    margin: 0.5px;
+    color: var(--color-icon);
+}
+
+/* PARA dispositivos pequenos*/
+
+@media screen and (max_width : 690px){
+   
+    .container{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    }
+}
+
